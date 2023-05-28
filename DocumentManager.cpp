@@ -22,7 +22,7 @@ void DocumentManager::addPatron(int patronID)
 {
     Patron* patron = new Patron(patronID);
     // made changes here
-    patrons[patronID] = patron->getID();
+    patrons[patronID] = patron;
 }
 
 int DocumentManager::search(string name)
