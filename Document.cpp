@@ -61,7 +61,7 @@ bool Document::Return()
     {
         copies_left = license_limit;
         // made change here 
-        return false;
+        return true;
     }
     return false;
 }
