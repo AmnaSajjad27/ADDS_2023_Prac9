@@ -16,7 +16,7 @@ class Document
     // constructors 
     Document();
     ~Document();
-    Document(std::string _name, int _id, int _license_limit)
+    Document(std::string _name, int _id, int _license_limit);
 
     std::string getName();
     int getID();
