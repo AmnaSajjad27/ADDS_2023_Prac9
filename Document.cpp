@@ -60,7 +60,8 @@ bool Document::Return()
     if(copies_left > license_limit)
     {
         copies_left = license_limit;
-        return false;
+        // made change here 
+        return true;
     }
     return true;
 }
