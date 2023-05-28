@@ -21,7 +21,8 @@ void DocumentManager::addDocument(string name, int id, int license_limit)
 void DocumentManager::addPatron(int patronID)
 {
     Patron* patron = new Patron(patronID);
-    patrons[patronID] = patron;
+    // made changes here
+    patrons[patronID] = patron->getID();
 }
 
 int DocumentManager::search(string name)
