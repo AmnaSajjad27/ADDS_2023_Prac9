@@ -29,9 +29,9 @@ int DocumentManager::search(string name)
 {
     if (name_document.find(name) == name_document.end())
     {
-        return name_document[name]->getID();
+        return 0;
     }
-    return 0;
+    return name_document[name]->getID();;
 }
 
 bool DocumentManager::borrowDocument(int docid, int patronID)
