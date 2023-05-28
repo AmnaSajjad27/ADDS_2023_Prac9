@@ -21,16 +21,16 @@ void DocumentManager::addDocument(string name, int id, int license_limit)
 void DocumentManager::addPatron(int patronID)
 {
     Patron* patron = new Patron(patronID);
-    patron[patronID] = patron;
+    patrons[patronID] = patron;
 }
 
 int DocumentManager::search(string name)
 {
-    if (document_ID.find(name) == document_ID.end())
+    if (name_document.find(name) == name_document.end())
     {
-        return 0;
+        return name_document[name]->getID();
     }
-    return document_ID[name]->getID();
+    return 0;
 }
 
 bool DocumentManager::borrowDocument(int docid, int patronID)
@@ -47,7 +47,8 @@ bool DocumentManager::borrowDocument(int docid, int patronID)
 
     bool Borrow = document->borrow();
 
-    if(Borrow){
+    if(Borrow)
+    {
         patron_limit = patron->addDoc(document);
     }
     return (Borrow & patron_limit);

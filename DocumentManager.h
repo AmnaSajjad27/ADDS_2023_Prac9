@@ -29,7 +29,6 @@ class DocumentManager
     std::map<int, Patron*> patrons;
     // Map of document ID's 
     std::map<int, Document*> document_ID;
-    
 };
 
 #endif
